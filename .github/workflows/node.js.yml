@@ -37,5 +37,5 @@ jobs:
     - name: Read file contents
       run: cat .env
     - name: docker build
-      run: docker build -t . nodejs
+      run:  docker build . --file Dockerfile --tag nodejs:$(date +%s)
 
