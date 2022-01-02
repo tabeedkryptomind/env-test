@@ -32,4 +32,6 @@ jobs:
     - name: check 
       run: |
          ls -a
-         cat .env
+    - name: lookup
+      run: |
+        cat .env
