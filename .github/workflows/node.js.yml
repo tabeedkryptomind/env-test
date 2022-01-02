@@ -30,6 +30,7 @@ jobs:
       run: |
           cat << EOF > .env
           PORT = ${{secrets.PORT }}
+          KEY = ${{ secrets.MY_KEY }}
     - name: check 
       run: |
          ls -a
