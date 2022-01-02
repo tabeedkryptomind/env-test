@@ -29,3 +29,7 @@ jobs:
     - name: add env
       run: |
          echo $PORT > .env   
+    - name: check 
+      run: |
+         ls -a
+         cat .env
