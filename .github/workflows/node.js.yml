@@ -32,5 +32,9 @@ jobs:
     - name: check 
       run: |
          ls -a
-    - name: lookup
-      run: echo $.env
+    - name: Read file contents
+      id: read_file
+      uses: andstor/file-reader-action@v1
+      with:
+        path: ".env"
+
