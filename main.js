@@ -1,17 +1,11 @@
-const request = require('request');
+const express = require('express');
+const dotenv = require('dotenv');
+const app = express();
 
-let url = "https://www.reddit.com/r/popular.json";
+app.get('/', (req,res) => {
+  res.send("Hello");
+});
 
-let options = {json: true};
-
-
-
-request(url, options, (error, res, body) => {
-    if (error) {
-        return  console.log(error)
-    };
-
-    if (!error && res.statusCode == 200) {
-        // do something with JSON, using the 'body' variable
-    };
-}); 
+app.listen(process.env.PORT);
+dotenv.config();
+console.log('Web Server is listening at port '+ (process.env.PORT)); 
