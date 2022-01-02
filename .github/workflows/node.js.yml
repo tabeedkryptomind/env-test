@@ -36,4 +36,6 @@ jobs:
          ls -a
     - name: Read file contents
       run: cat .env
+    - name: docker build
+      run: docker build -t nodejs
 
